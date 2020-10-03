@@ -1,1 +1,1 @@
-# Single-Variable-Optimization-Algorithms
+# Single Variable Optimisation Algorithms
