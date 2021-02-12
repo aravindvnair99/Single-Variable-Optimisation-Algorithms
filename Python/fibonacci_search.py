@@ -1,6 +1,5 @@
-#Algorithm for Fibonacci Search Method
-import math
-#Function to get Fibonacci numbers
+#4 Fibonacci Search Method
+from math import exp, sin, cos, log
 def F(n):  
     FibArray = [1,1]       
     while len(FibArray) < n + 1:  
@@ -14,10 +13,15 @@ def F(n):
             FibArray[n - 2] = F(n - 2)            
     FibArray[n] = FibArray[n - 2] + FibArray[n - 1]  
     return FibArray[n]
-k=2 #To keep a count of number of iterations
+k=2
 a,b=map(float,input("Enter lower limit, higher limit: ").split())
-m=int(input("Enter number of function evaluations: "))
-expr=input("Enter expression for x: ")
+choice=int(input("Enter 0 to input number of iterations or enter 1 to input number of function evaluations: "))
+if(choice==0):
+  n=int(input("Enter number of iterations: "))
+  m=n+1
+else:
+  m=int(input("Enter number of function evaluations: "))
+expr=input("Enter expression for x ")
 L=abs(b-a)
 k=2
 while(True):
@@ -34,4 +38,4 @@ while(True):
     break
   else:
     k=k+1
-print("Minimum lies in the interval ",a," and ",b)
+print("Minimum lies in the interval ",round(a,5)," and ",round(b,5))
